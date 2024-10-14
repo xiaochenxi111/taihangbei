@@ -1,0 +1,39 @@
+<!--pages/trade/trade.wxml-->
+<view class="container">
+  <van-icon name="arrow-left" style="margin-left: 25px;" size="20px" bindtap="navigateToIndex" />
+  <text style="margin-left: 27%; font-size: 18px;">校友交易</text>
+
+  <view class="search-box">  
+    <input type="search" placeholder="请输入关键字搜索" bindconfirm="handleSearch"
+    confirm-type="search" />  
+    <button bind:tap="goods" class="goods">搜索</button>  
+  </view>  
+
+  <image src="https://img0.baidu.com/it/u=4082910669,1753989180&fm=253&fmt=auto&app=138&f=JPEG?w=1000&h=500" class="img" />
+  <view class="sort">  
+    <block wx:for="{{items}}" wx:key="index">  
+      <view style="width: 18vw;display: flex; margin-left: 2%;flex-direction: column; align-items: center;">  
+        <image src="{{item.image}}" class="pic" />  
+        <view style="font-size: small;width: 20vw;padding-left: 30%;">{{item.text}}</view>  
+      </view>  
+    </block>  
+  </view>
+
+  <view class="list">  
+    <block wx:for="{{details}}" wx:key="index">  
+      <view class="detail">  
+        <image src="{{item.img}}" class="look" />  
+        <view style="margin: 7px 10px;">  
+          <view>{{item.description}}</view>  
+          <view class="price">  
+            ￥<text class="num">{{item.price}}</text>{{item.unit}} 
+          </view>    
+          <view class="seller">  
+            <image src="{{item.seller.avatar}}" class="avatar" />  
+            <text style="margin-left: 5px; color: grey;">{{item.seller.name}}</text>  
+          </view>  
+        </view>  
+      </view>  
+    </block>  
+  </view>
+</view>

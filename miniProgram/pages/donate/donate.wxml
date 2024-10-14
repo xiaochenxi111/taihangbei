@@ -1,0 +1,114 @@
+<view class="container" >
+  <view>
+    <image src="https://img2.baidu.com/it/u=1686805735,1816543929&fm=253&fmt=auto&app=120&f=JPEG?w=954&h=609" class="school" mode="aspectFill" />
+    <van-icon name="arrow-left" style="margin-top: 60px; margin-left: 30px;" size="20px" bindtap="navigateToIndex" />
+  </view>
+  <view class="card">
+    <view class="num">
+      <image src="../../icons/avatar.svg" style="width: 45px; height: 45px; margin-left: 45px;" />
+      <view style="margin-left: 10px;">
+        <view style="font-size: 20px;">561</view>
+        <view style="color: rgb(107, 107, 107);">参与人次</view>
+      </view>
+    </view>
+
+    <view class="num">
+      <image src="../../icons/wallet.svg" style="width: 40px; height: 40px; margin-left: 32px;" />
+      <view style="margin-left: 12px;">
+        <view style="font-size: 20px;">15w +</view>
+        <view style="color: rgb(107, 107, 107);">已筹金额</view>
+      </view>
+    </view>
+  </view>
+
+  <view style="display: flex; flex-direction: row;">
+    <view class="fund">
+      <view class="word">基金会简介</view>
+      <image src="../../icons/right.svg" class="img" />
+    </view>
+    <view class="note">
+      <view class="word">捐赠指南</view>
+      <image src="../../icons/right.svg" class="img" />
+    </view>
+  </view>
+
+  <view class="thanks">
+    <view class="title">捐赠鸣谢</view>
+    <view class="name">
+      <image src="../../icons/avatar.svg" class="avatar" />     
+      <text class="text1">张*三 捐赠</text>
+      <text class="text2">2000元</text>
+      <text class="text3">2023-09-15</text>
+    </view>
+    <view style="width: 370px;" class="name" bindtap="showSheet">
+      <image src="../../icons/avatar.svg" class="avatar" />
+      <text class="text1">2018届工管1班 敬赠</text>
+      <text class="text2">"水木荷砚"</text>
+      <text class="text3">2018年</text>
+    </view>
+    <van-action-sheet
+      show="{{ show }}"
+      bind:close="onClose"
+      title="水木荷砚"
+    >
+      <image src="https://ss2.meipian.me/users/49595868/5d8d9e71c9ac4146a8241241d8c1be20.jpg?imageView2/2/w/750/h/1400/q/80" class="photo" />
+      <view class="site">【水木荷砚】(图书馆南)</view>
+      <view class="intro">精工细作取澄泥，数朵莲花出墨池。水木青青诗意起，荷香砚韵不离题。</view>
+      <view class="from">-- 2018届高级工商管理研习班敬献</view>
+    </van-action-sheet>
+
+    <view style="width: 305px;" class="name" bindtap="showSheet1">
+      <image src="../../icons/avatar.svg" class="avatar" />
+      <text class="text1">2015界校友敬赠</text>
+      <text class="text2">"携手"</text>
+      <text class="text3">2015年</text>
+    </view>
+    <van-action-sheet
+      show="{{ show1 }}"
+      bind:close="onClose1"
+      title="携手"
+    >
+      <image src="https://ss2.meipian.me/users/49595868/51b308e930c34313b53f9ba95f7b3647.jpg?imageView2/2/w/750/h/1400/q/80" class="photo" />
+      <view class="site">【携手】(西操场东面)</view>
+      <view class="intro">携手联心，天涯比邻。跨界对话， 友爱永生。行健不息，厚徳势坤。</view>
+      <view class="from" style="margin-left: 280px;">-- 2015届校友敬赠</view>
+    </van-action-sheet>
+    <image src="../../icons/click.svg" class="here" />
+  </view>
+
+  <view>
+    <text class="project">推荐项目</text>
+    <text style="margin-left: 55%; color: grey;">更多</text>
+    <van-icon name="arrow" color="grey" />
+  </view>
+  <view class="module" style="margin-top: 3%;">
+    <image src="https://img1.baidu.com/it/u=2213198430,3886285566&fm=253&fmt=auto&app=120&f=JPEG?w=1067&h=800" class="pic" />
+    <view class="area">河北师范大学教育发展基金</view>
+    <view class="detail">该基金所筹集款项将用于河北师范大学的学科发展、专业建设以及教学环境的改善等方面。</view>
+    <view class="sum">
+      <van-icon name="like" />
+      <text style="margin-left: 7px;">共112人捐赠</text>
+      <text style="margin-left: 50px;">已筹 69245.37元</text>
+    </view>
+  </view>
+  <view class="module" style="margin-top: 3%;">
+    <image src="https://img0.baidu.com/it/u=3190429295,589091626&fm=253&fmt=auto&app=138&f=JPEG?w=678&h=500" class="pic" />
+    <view class="area">软件学院校友基金</view>
+    <view class="detail">该基金所筹集款项将主要用于软件学院的学科建设、技术创新以及教学设施的升级等方面。</view>
+    <view class="sum">
+      <van-icon name="like" />
+      <text style="margin-left: 7px;">共31人捐赠</text>
+      <text style="margin-left: 50px;">已筹 30026.01元</text>
+    </view>
+  </view>
+  <view class="module" style="margin-top: 3%;">
+    <image src="https://img1.baidu.com/it/u=2921431691,255952948&fm=253&fmt=auto&app=138&f=JPEG?w=751&h=500" class="pic" />
+    <view class="area">音乐学院校友基金</view>
+    <view class="detail">该基金所筹集款项将主要用于音乐学院的学科发展、艺术创新以及教学设备的更新等方面。</view>
+    <view class="sum">
+      <van-icon name="like" />
+      <text style="margin-left: 7px;">共65人捐赠</text>
+      <text style="margin-left: 50px;">已筹 8509.34元</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<!-- pages/leaveSchool/leaveSchool.wxml -->
+<view class="my-view"></view>
+<view class="container">
+  <view class="nav-bar">
+    <van-icon name="arrow-left" style="margin-top: 60px; margin-left: 30px;" size="20px" bindtap="navigateToIndex" />
+  </view>
+  <form bindsubmit="submitLeaveSchool" style="margin-top: 13%;">
+    <view class="form-item">
+      <text class="label">学号：</text>
+      <input class="input" name="studentId" type="text" placeholder="请输入学号" />
+    </view>
+    <view class="form-item">
+      <text class="label">姓名：</text>
+      <input class="input" name="name" type="text" placeholder="请输入姓名" />
+    </view>
+    <view class="form-item">
+      <text class="label">原因：</text>
+      <textarea class="textarea" name="reason" placeholder="请输入休学原因" />
+    </view>
+    <button form-type="submit" class="submit-button">提交申请</button>
+  </form>
+</view>

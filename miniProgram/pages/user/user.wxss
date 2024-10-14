@@ -1,0 +1,142 @@
+.container {
+  width: 100vw;
+  height: 90vh;
+  padding-top: 15%;
+  background: linear-gradient(to bottom, rgb(199, 241, 227), rgb(216, 243, 235), white);
+}
+.title {
+  font-size: 50px;
+  font-style: italic;
+  text-shadow: 3px 3px 5px rgb(139, 182, 167);
+  color: rgb(78, 185, 148);
+  margin-left: 10px;
+}
+.login {
+  width: 250px;
+  height: 4vh;
+  border-radius: 30px;
+  background-color: rgb(126, 214, 183);
+  margin-top: 80px;
+  padding: 4px 5px;
+  color: aliceblue;
+}
+.welcome {
+  font-size: 23px;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(120, 201, 173);
+  margin-left: 20px;
+}
+.sheet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.sheet input {
+  border: solid 1.3px rgb(202, 202, 202);
+  border-radius: 14px;
+  margin-top: 20px;
+  width: 300px;
+  padding: 9px;
+}  
+.page {
+  height: 843px;
+  background-color: #f1f1f1;
+  position: relative;
+}
+.header {
+  height: 250px;
+  /* background: linear-gradient(to bottom, rgb(206, 241, 230), rgb(216, 243, 235), rgb(189, 217, 228)); */
+  /* background-image: url('https://img2.baidu.com/it/u=2708386951,756829768&fm=253&fmt=auto&app=138&f=JPEG?w=562&h=500'); */
+  border-radius: 0 0 40px 40px;
+}
+.list {
+  width: 97vw;
+  height: 100px;
+  margin-top: 55px;
+  margin-left: 7px;
+  margin-right: 7px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  position: absolute;
+  top: 683px;
+  left: 81px;
+}
+.littleList {
+  width: 120px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px dashed rgb(153, 153, 153);
+  margin-top: 15px;
+}
+.list text {
+  font-size: 17px;
+}
+.award {
+  position: absolute;
+  top: 410px;
+  left: 0px;
+}
+.message {
+  /* background: linear-gradient(to right, rgb(221, 243, 236), rgb(221, 243, 237), rgb(214, 232, 240)); */
+  padding: 15px 0 15px 35px;
+}
+.self {
+  width: 97vw;
+  height: 410px;
+  margin: 15px auto;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.uploaded-image {  
+  width: 70px; 
+  height: 70px; 
+  border-radius: 50%; 
+  overflow: hidden;  
+  margin-left: 20px;
+}
+
+.popup {
+  width: 40px;
+  height: 40px;
+  margin-left: 0px;
+  background-color: transparent;
+  margin-top: 10px;
+}
+.introduction {
+  width: 270px;
+  border: 1.5px dashed rgb(190, 190, 190);
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 90px;
+  margin-top: 7px;
+}
+.vip {
+  width:94vw;
+  height: 80px;
+  border-radius: 15px;
+  background-color: rgb(236, 225, 195);
+  position: absolute;
+  margin-top: 210px;
+  margin-left: 3%;
+  display: flex;
+  align-items: center;
+}
+.write {
+  font-size: 14px;
+  border-radius: 20px;
+  background-color: rgb(66, 64, 11);
+  color: rgb(230, 192, 25);
+  font-weight: bold;
+}

@@ -1,0 +1,62 @@
+<!--pages/activity/activity.wxml-->
+<view class="container">
+  <van-icon name="arrow-left" style="margin-left: 25px;" size="20px" bindtap="navigateToIndex" />
+  <text style="margin-left: 27%; font-size: 18px;">校友活动</text>
+
+  <view class="search-box">  
+    <input type="search" placeholder="请输入关键字搜索" bindconfirm="handleSearch"
+    confirm-type="search" />  
+    <button bind:tap="goods" class="goods">搜索</button>  
+  </view>  
+
+  <view class="title">
+    <view class="continue">报名中</view>
+    <view class="stop">进行中</view>
+    <view class="stop">已结束</view>
+  </view>
+
+  <view class="background">
+    <view class="detail">
+      <image src="https://pic.cmc.hebtv.com/0/0d91d6cfb98f5b206ac1e752757fc5a9/2024/09/14/9524d66fdb6f42e182687d3c2646c100.jpg" class="img" />
+      <view class="word">
+        <view class="race">金融科技创新大赛</view>
+        <view class="time">
+          <van-icon name="clock-o" size="20px" />
+          <text style="font-size: 14px;">10/15 18:00 | 周二</text>
+        </view>
+        <view class="time">
+          <van-icon name="location-o" size="20px" />
+          <text>河北省石家庄市裕华区河北银行</text>
+        </view>
+      </view>
+    </view>
+    <view class="detail">
+      <image src="https://img1.baidu.com/it/u=1486630741,236631869&fm=253&fmt=auto&app=120&f=JPEG?w=878&h=500" class="img" />
+      <view class="word">
+        <view class="race">秋季运动会</view>
+        <view class="time">
+          <van-icon name="clock-o" size="20px" />
+          <text style="font-size: 14px;">9/26 9:00 | 周五</text>
+        </view>
+        <view class="time">
+          <van-icon name="location-o" size="20px" />
+          <text>河北省石家庄市裕华区河北师范大学</text>
+        </view>
+      </view>
+    </view>
+    <view class="detail">
+      <image src="https://img1.baidu.com/it/u=850476613,1375703961&fm=253&fmt=auto?w=1026&h=414" class="img" />
+      <view class="word">
+        <view class="race">校园招聘大会</view>
+        <view class="time">
+          <van-icon name="clock-o" size="20px" />
+          <text style="font-size: 14px;">11/09 8:00 | 周六</text>
+        </view>
+        <view class="time">
+          <van-icon name="location-o" size="20px" />
+          <text>河北省石家庄市裕华区河北师范大学</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

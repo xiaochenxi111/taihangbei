@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "swiper":"../../components/swiper/swiper",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "float-button": "/components/float-button/float-button"
+  }
+}

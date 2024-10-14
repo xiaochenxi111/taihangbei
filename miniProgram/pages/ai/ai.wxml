@@ -1,0 +1,64 @@
+<!--pages/ai/ai.wxml-->
+<view class="container row mtop-2"></view>
+<view class="container row mtop-1"></view>
+<view class="page-container mtop-2">
+  <view class="nav-bar">
+    <image src="/images/back.svg" 
+        mode="aspectFit" 
+        bindtap="reLaunchToHome" 
+        class="icon-small"/>
+    <view class="nav-title">AI小脉</view>
+  </view>
+
+  <view class="chat-container {{showOperationPanel ? 'shifted' : ''}}">
+
+    <!-- 对话框 -->
+    <scroll-view 
+      scroll-y="true" 
+      class="message-list" 
+      show-scrollbar="false" 
+      enhanced="true" 
+      scroll-into-view="{{scrollToMessage}}">
+      <block wx:for="{{messages}}" wx:key="*this">
+        <view id="msg-{{item.id}}" class="message {{item.isSelf ? 'self' : 'other'}}">
+          <image class="avatar" src="{{item.avatar}}"></image>
+          <view class="content">{{item.content}}</view>
+        </view>
+      </block>
+    </scroll-view>
+    <view class="container row mtop-2"></view>
+    <view>
+      <view class="container row mtop-2 transition" wx:if="{{showOperationPanel}}"></view>
+      <view class="container row mtop-2 transition" wx:if="{{showOperationPanel}}"></view>
+      <view class="container row mtop-2 transition" wx:if="{{showOperationPanel}}"></view>
+      <view class="container row mtop-2 transition" wx:if="{{showOperationPanel}}"></view>
+      <view class="container row mtop-1 transition" wx:if="{{showOperationPanel}}"></view>
+    </view>
+  </view>
+    
+  <view>
+    <!-- 输入区 -->
+    <view class="input-area {{showOperationPanel ? 'panel-open' : ''}}">
+      <input class="message-input" 
+              type="text" 
+              value="{{inputMessage}}" 
+              bindinput="onInputChange"     
+              bindconfirm="sendMessage" 
+              placeholder="输入消息..."/>
+      <image class="add-button" src="/images/send.svg" bindtap="sendMessage"></image>
+      <view class="add-button" bindtap="toggleOperationPanel">+</view>
+    </view>
+
+    <!-- 操作面板 -->
+    <view class="operation-panel {{showOperationPanel ? 'show' : ''}}">
+      <view class="hints">
+        <text bindtap="sendHint" data-content="请问我的档案调动有问题怎么办？">档案调动问题</text>
+        <text bindtap="sendHint" data-content="如何知道校招和社招信息？">校招社招信息</text>
+        <text bindtap="sendHint" data-content="如何备战考研？">备战考研</text>
+        <text bindtap="sendHint" data-content="如何备战考公？">备战考公</text>
+      </view>
+    </view>
+    
+  </view>
+
+</view>

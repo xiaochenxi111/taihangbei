@@ -1,0 +1,111 @@
+/* index.wxss */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.con {
+  width: 100%;
+  height: 300rpx;
+}
+.myView {
+  width: 100%;
+  height: 100%;
+}
+.video-title {
+  position: absolute;
+  left: -60%;
+  right: 0;
+  bottom: 12.5%; /* 根据需要调整位置 */
+  color: #fff; /* 根据需要调整颜色 */
+  text-align: center;
+  font-size: 16px; /* 根据需要调整字体大小 */
+  z-index: 10; /* 确保标题在视频上方 */
+  /* 可以添加更多样式来美化标题 */
+}
+.like-icon {
+  width: 35rpx;
+  height: 35rpx;
+  position: absolute;
+  bottom: 142rpx; /* 调整位置 */
+  right: 150rpx; /* 调整位置 */
+  z-index: 20; /* 确保图标在视频控件上方 */
+}
+/* 添加翻转图标的样式 */
+.sync-reverse-icon {
+  width: 50rpx; /* 根据实际图标大小调整 */
+  height: 50rpx; /* 根据实际图标大小调整 */
+  position: absolute;
+  bottom: 92rpx; /* 调整位置 */
+  right: 47rpx; /* 调整位置 */
+  z-index: 20; /* 确保图标在视频控件上方 */
+}
+
+.collect-icon {
+  width: 45rpx; /* 根据实际图标大小调整 */
+  height: 45rpx; /* 根据实际图标大小调整 */
+  position: absolute;
+  bottom: 140rpx; /* 调整位置 */
+  right: 80rpx; /* 调整位置，确保它在like-icon的右边 */
+  z-index: 20; /* 确保图标在视频控件上方 */
+}
+/* 添加弹幕输入框和按钮的样式 */
+.danmu-container {
+  position: absolute;
+  bottom: 70rpx; /* 根据需要调整位置 */
+  left: 20rpx;
+  right: 20rpx;
+  display: flex;
+  align-items: center;
+  z-index: 20;
+}
+
+.danmu-input {
+  flex: 1;
+  height: 60rpx;
+  background-color: #f2f2f2;
+  border-radius: 30rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  margin-right: 10rpx; /* 添加右边距，为按钮留出空间 */
+}
+
+.send-danmu-btn {
+  flex: 0.5;
+  width: 80rpx; /* 减小按钮宽度 */
+  height: 50rpx; /* 减小按钮高度 */
+  line-height: 26rpx; /* 调整行高以适应按钮高度 */
+  text-align: center;
+  background-color: #1AAD19;
+  color: white;
+  border-radius: 25rpx; /* 根据按钮大小调整圆角 */
+  font-size: 24rpx; /* 减小字体大小 */
+}
+/* 添加评论图标的样式 */
+.comment-icon {
+  width: 35rpx; /* 根据实际图标大小调整 */
+  height: 35rpx; /* 根据实际图标大小调整 */
+  position: absolute;
+  bottom: 140rpx; /* 调整位置，确保与收藏图标在同一水平线上 */
+  right: 19rpx; /* 调整位置，放置在收藏图标的右边 */
+  z-index: 20; /* 确保图标在视频控件上方 */
+}
+/* ... 其他样式保持不变 ... */
+
+.danmu-container-wrapper {
+  /* 初始状态应该是隐藏的，但是要有正确的高度，以便在.show时能够显示 */
+  height: 0; /* 初始隐藏 */
+  transition: height 0.3s; /* 平滑过渡效果 */
+}
+
+.danmu-container-wrapper.show {
+  height: 100rpx; /* 显示时的正确高度 */
+}
+.danmu-container-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* 其他样式保持不变 */
+}
+

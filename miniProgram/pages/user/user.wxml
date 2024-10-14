@@ -1,0 +1,164 @@
+<view class="page" wx:if="{{!isLogin}}">
+  <!-- <view style="width: 100%; height: 250px; position: absolute; z-index: -1; overflow: hidden; ">
+    <image src="../../icons/up.jpg" style="width: 100%; height: 250px;" />
+  </view>   -->
+  <!-- <view class="award">  
+    <image src="../../icons/award.svg" style="width: 43px; height: 43px;"/>  
+  </view>  -->
+  <view class="vip">
+    <view style="display: flex; flex-direction: column; margin-bottom: 10px;">
+      <image src="../../icons/vip.svg" style="width: 50px; height: 45px; margin-left: 15px;" />
+      <text style="margin-left: 15px; width: 35vw;">完善个人信息，</text>
+      <text style="margin-left: 15px; width: 35vw;">立享更多权益~</text>
+    </view>
+    <view style="margin-left: 10%;">
+      <button class="write" bindtap="onLogin">去 完 善</button>
+    </view>  
+  </view>
+
+  <view class="header">
+    <view>
+      <image src="../../icons/up.jpg" style="width: 100%; height: 250px;" />
+    </view>
+    <view style="display: flex; align-items: center; position: absolute; top: 100px;width: 100vw;">
+      <view>
+        <image src="../../icons/avatar.svg" style="width: 12vw; margin-left: 20px; height: 60px;" bindtap="chooseImage" wx:if="{{showButton}}"/>
+        <block wx:for="{{fileList}}" wx:key="index">  
+          <image src="{{item}}" mode="aspectFill" class="uploaded-image"></image>  
+        </block>  
+      </view>
+
+      <text style="font-size: 20px; margin-left: 10px;">{{ name }}</text>
+
+      <image src="../../icons/code.svg" style="width: 25px; height: 25px; margin-left: 10px;" bindtap="showPopup" />
+      <van-popup show="{{ showPopup }}" bind:close="closePopup" custom-style="height: 25%; width: 50%;">
+        <image src="/icons/code.svg" style="width: 100%; height: 100%; display: block;" />  
+      </van-popup>
+      
+      <view style=" margin-top: 5px; margin-left: 25%;">
+        <navigator url="/pages/camera/camera" open-type="navigate">  
+          <van-icon name="scan" size="30px" />
+        </navigator>
+      </view>  
+      <van-icon name="setting-o" size="30px" style="margin-left: 30px;" bindtap="showSheet" />
+      <van-action-sheet
+        show="{{ show }}"
+        bind:close="onClose"
+        title="设置"
+      >
+        <van-cell title="免责条款" is-link size="large" />
+        <van-cell title="隐私政策" is-link size="large" />
+        <van-cell title="用户协议" is-link size="large" />
+        <van-cell title="购买协议" is-link size="large" />
+        <van-cell title="版本号" size="large" value="v2.5.4" />
+      </van-action-sheet>
+    </view>
+  </view>
+
+  <view class="list">
+    <view style="display: flex; flex-direction: row;">
+      <view class="littleList">
+        <van-icon name="chat-o" info="9" size="30px" />
+        <text>消息</text>
+      </view>
+      <view class="littleList">
+        <van-icon name="good-job-o" size="30px" />
+        <text>点赞</text>
+      </view>
+      <view class="littleList">
+        <van-icon name="like-o" size="30px" />
+        <text>关注</text>
+      </view>
+      <view class="littleList" style="border: none;">
+        <van-icon name="star-o" size="30px" />
+        <text>收藏</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="self">
+    <text class="message">个人简介</text>
+    <van-cell title="职业" value="{{work}}" size="large" is-link bind:tap="showWork" />
+    <van-action-sheet
+      show="{{ showWork }}"
+      bind:close="closeWork"
+      title="职业"
+    >
+      <van-picker columns="{{ works }}" bind:change="onWorkChange" value="{{ workValue }}" />
+    </van-action-sheet>
+
+    <van-cell title="所在地" is-link size="large" bind:tap="showArea" value="{{area}}" />
+    <van-action-sheet
+      show="{{ showArea }}"
+      bind:close="closeArea"
+      title="所在地"
+    >
+      <van-picker columns="{{ columns }}" bind:change="onAreaChange" value="{{ pickerValue }}" />
+    </van-action-sheet>
+    <van-cell title="作品展示" is-link size="large" />
+    <van-cell title="个人介绍" is-link size="large" label="所获奖项、就业经历等" bind:tap="showAward" autosize />
+    <van-action-sheet
+      show="{{ showAward }}"
+      bind:close="closeAward"
+      title="个人介绍"
+    >
+      <van-cell-group>
+        <van-field
+          value="{{ inputMessage }}"
+          label="留言"
+          type="textarea"
+          placeholder="介绍一下你自己吧~"
+          autosize
+          size="large"
+          bind:change="updateMessage"
+        />
+      </van-cell-group>
+    </van-action-sheet>
+    <view class="introduction">{{message}}</view>
+    <!-- <view class="label">
+      <image src="../../icons/label.svg" style="width: 40px; height: 40px;"></image>
+    </view> -->
+  </view>
+
+</view>
+<!-- <view class="container row mtop-2"></view> -->
+<view class="container" wx:if="{{isLogin}}">
+  <view>
+    <image src="/images/back.svg" 
+        mode="aspectFit"  
+        bindtap="reLaunchToHome" 
+        class="icon-small"/>
+  </view>
+  <view style="padding-top: 40px; display: flex; align-items: center;">
+    <image src="../../icons/friends.svg" style="width: 50px; height: 50px; margin-left: 20px;"/>
+    <text class="title">校 脉</text>
+  </view>
+
+  <text class="welcome">欢迎你的到来~</text>
+  <view>   
+    <view class="sheet">
+      <input type="text" placeholder="请输入真实姓名" bind:change="inputName" />
+      <input type="text" placeholder="请输入学校" />
+      <input type="text" placeholder="请输入入学年份" />
+      <input type="text" placeholder="请输入专业" />
+
+      <view style="display: flex; align-items: center; margin-top: 25px;">
+        <text style="font-size: 19px;">请选择性别：</text>  
+        <radio-group bindchange="onChange">  
+          <label><radio value="1" checked="{{radio === '1'}}">男</radio></label>  
+          <label><radio value="2" checked="{{radio === '2'}}">女</radio></label>  
+        </radio-group>  
+      </view>
+    </view> 
+
+    <button bindtap="onEnter" class="login">进入</button>
+    <checkbox-group bindchange="onSelect" style="margin-top: 10px; margin-left: 25px;">  
+      <label>  
+        <checkbox value="agree" checked="{{checked}}">我已阅读并同意校脉  
+          <text style="color: #72bda3;">《用户协议》</text>和  
+          <text style="color: #72bda3;">《隐私政策》</text>  
+        </checkbox>  
+      </label>  
+    </checkbox-group>
+  </view>
+</view>

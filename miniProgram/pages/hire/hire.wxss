@@ -1,0 +1,149 @@
+/* pages/hire/hire.wxss */
+.page{
+  width: 96%;
+}
+
+.container {
+  width: 100%;
+  height: 270px;
+}
+.search-box {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.search-box input {  
+  width: 70%;  
+  padding: 12px;  
+  border-radius: 20px;  
+  margin-left: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}  
+.goods {
+  width: 16%;
+  border-radius: 15px;
+  background-color: rgb(196, 224, 164);
+}
+.img {
+  width: 100%;
+  height: 270px;
+  position: absolute;
+  z-index: -1;
+}
+.tap {
+  margin-left: 17px;
+  margin-top: 58px;
+}
+.list {
+  /* width: 390px; */
+  height: 80px;
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: row;
+}
+.pic {
+  width: 55px;
+  height: 55px;
+}
+.notice {
+  /* width: 400px; */
+  height: 45px;
+  margin-left: 13px;
+  padding-top: 4px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  border-radius: 7px;
+}
+.project {
+  display: inline-block;
+  font-size: 20px;
+  color: rgb(111, 163, 50);
+  margin-left: 25px;
+}
+.text {
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 8px 15px;
+  padding-left: 10px;
+  border-left: 4px solid rgb(160, 199, 115);
+}
+.more {
+  display: inline-block;
+  margin-left: 55%;
+  color: grey;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+.company {
+  width: 40%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 7px;
+  text-align: center;
+  margin-left: 8px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+}
+.brand {
+  width: 55px;
+  height: 65px;
+}
+.name {
+  font-weight: bolder;
+  margin-top: 5px;
+}
+.sort {
+  color: rgb(150, 150, 150);
+  margin-top: 5px;
+}
+.window {
+  /* width: 95%; */
+  height: 165px;
+  margin-left: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 15px 15px;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.job {
+  font-weight: bolder;
+  font-size: 19px;
+}
+.money {
+  font-size: 16px;
+  font-weight: bolder;
+  color: rgb(128, 199, 96);
+}
+.request {
+  display: flex;
+  align-items: center;
+}
+.little {
+  background-color: rgb(231, 231, 231);
+  padding: 5px 8px;
+  border-radius: 3px;
+  margin-top: 9px;
+  margin-left: 9px;
+  font-size: 14px;
+  color: rgb(95, 95, 95);
+}
+.employer {
+  border-top: 1px solid rgb(199, 198, 198);
+  margin-top: 30px;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}

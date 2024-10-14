@@ -1,0 +1,249 @@
+.background {
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  top: 0.1%;
+  z-index: -2;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5));
+  z-index: -1;
+  /* 从透明到不透明 */
+}
+
+.title {
+  width: 100vh;
+  font-size: 26px;
+  font-weight: bolder;
+  font-style: italic;
+  margin-left: 35%;
+  margin-bottom: 10px;
+  /* text-shadow: 3px 3px 6px rgb(51, 51, 51); */
+}
+.list {
+  width: 96vw;
+  height: 90px;
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: rgb(240, 243, 226);
+  box-shadow: 0 4rpx 15rpx 2rpx rgba(209, 224, 198, 0.4);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.littleList {
+  width: 120px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px dashed rgb(153, 153, 153);
+  margin-top: 15px;
+}
+.list text {
+  font-size: 17px;
+  font-weight: 540;
+  /* text-shadow: 1px 3px 2px rgb(100, 98, 98); */
+}
+.tag {
+  width: 70vw;
+  height: 90px;
+  margin-left: 30%;
+  position: absolute;
+  z-index: -1;
+}
+.tagText {
+  margin-top: 32px;
+  margin-left: 55%;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.exchange {
+  width: 56vw;
+  height: 130px;
+  margin-left: 36%;
+  margin-top: 25px;
+  position: relative; /* 添加相对定位 */
+  z-index: 3;
+}
+.window {
+  width: 56vw;
+  height: 135px;
+  margin-left: 36%;
+  margin-top: 25px;
+  background-color: rgb(240, 243, 226);
+  border-radius: 5px;
+  position: relative; /* 添加相对定位 */
+  z-index: 3;
+}
+
+.xiaomai {
+  display: flex;
+  position: absolute; /* 固定定位 */
+  left: -45vw; /* 基于 .window 的 margin-left 和宽度的百分比进行偏移 */
+  top: -2vh; /* 基于 .window 的 margin-top 和高度的百分比进行偏移 */
+  width: 50vw;
+  height: 25vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  padding-top: 7px;
+  padding-left: 7px;
+}
+.wages {
+  margin-left: 70px;
+  color: rgb(111, 180, 79);
+  font-weight: bolder;
+}
+.detail {
+  display: flex;
+  flex-direction: row;
+}
+.request {
+  background-color: rgb(218, 218, 218);
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-top: 7px;
+  width: 25px;
+  margin-left: 9px;
+  font-size: 12px;
+  color: rgb(95, 95, 95);
+}
+.benefit {
+  background-color: rgb(218, 218, 218);
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-top: 7px;
+  width: 55px;
+  margin-left: 9px;
+  font-size: 12px;
+  color: rgb(95, 95, 95);
+}
+.company {
+  margin-top: 20px;
+  margin-left: 7px;
+  border-top: 0.8px solid rgb(172, 171, 171);
+  padding-top: 3px;
+}
+.basic {
+  padding: 10px 10px;
+  margin-left: 15px;
+  border-left: 3px solid rgb(135, 196, 107);
+  font-weight: bolder;
+}
+.money {
+  font-weight: bolder;
+  padding: 5px 10px;
+  border-bottom: 3px solid rgb(157, 207, 133);
+  width: 80px;
+  margin-left: 10px;
+}
+.sum {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+  border-bottom: 1px solid grey;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+.pay {
+  background-color: rgb(157, 207, 133);
+  width: 10vw;
+  border-radius: 12px;
+  margin-top: 5px;
+  margin-left: 60%;
+  padding: 3px 20px;
+}
+
+.alumni-news{
+  position:relative;
+  /* border:1px green solid; */
+  width:100%;
+  height:100rpx;
+}
+.alumni-news-icon{
+  display:block;
+  position: absolute;
+  left:-10rpx;
+  width:80rpx;
+  height:100rpx;
+}
+.alumni-news-span{
+  position:absolute;
+  top:22.5%;
+  left:8%;
+  font-weight:bold;
+  font-size:35rpx;
+  color:#47B085;
+}
+.more{
+  position:absolute;
+  top:28%;
+  right:2%;
+  font-size:30rpx;
+  color:#47B085;
+}
+.news-item {
+  position: relative;
+  padding: 20rpx;
+  margin-bottom:15rpx;
+  border-bottom: 1px solid #ccc;
+  background-color: rgb(240, 243, 226);
+}
+
+.news-item:first-child {
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+  margin-bottom:0;
+}
+
+.news-title {
+  font-weight: bold;
+  font-size: 30rpx;
+  line-height: 1.5;
+  margin-bottom: 20rpx;
+}
+
+.news-body {
+  display: flex;
+  align-items: flex-start;
+}
+
+.news-content {
+  flex: 1;
+  font-size: 28rpx;
+  line-height: 1.5;
+  margin-right: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 调整行数以适应约80个字符 */
+  -webkit-box-orient: vertical;
+}
+
+.news-photo {
+  width: 30%;
+  height: 125rpx; /* 设置固定高度，与内容区域匹配 */
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+
+.news-photo image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="nav-bar">
+    <!-- <image src="/images/back.svg" 
+        mode="aspectFit" 
+        bindtap="reLaunchToHome" 
+        class="icon-small"/> -->
+        <van-icon name="arrow-left" style="margin-top: 60px; margin-left: 30px;" size="20px" bindtap="navigateToIndex" />
+  </view>
+  <view class="title">业务办理</view>
+  <view class="service-list">
+    <navigator url="/pages/archiveMove/archiveMove" class="service-item">
+      <image class="service-icon" src="/images/archive.svg"></image>
+      <text class="service-name">档案调动</text>
+    </navigator>
+    <navigator url="/pages/leaveSchool/leaveSchool" class="service-item">
+      <image class="service-icon" src="/images/leave.svg"></image>
+      <text class="service-name">休学申请</text>
+    </navigator>
+  </view>
+</view>

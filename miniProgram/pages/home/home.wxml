@@ -1,0 +1,118 @@
+<!--pages/index/index.wxml-->
+<view class="container" style="position: relative;" bindtap="onTap">
+  <view>
+    <image src="../../icons/background1.jpeg" class="background" mode="widthFix" />
+    <view class="gradient-overlay"></view>
+  </view>
+  <image src="../../icons/click.svg" style="width: 35px; height: 35px; position: absolute; top: 750px; right: 1%;z-index: 5;" />
+  <view class="header" style="padding-top: 220px;">
+    <view class="container row mtop-2"></view>
+    <swiper
+      indicatorDots="{{swiperOptions.indicatorDots}}"
+      autoplay="{{swiperOptions.autoplay}}"
+      interval="{{swiperOptions.interval}}"
+      duration="{{swiperOptions.duration}}"
+    ></swiper>
+
+    <view style="margin-top: 60px;" class="title">特色功能</view>
+    <view class="list">
+      <view style="display: flex; flex-direction: row;">
+        <view class="littleList" bindtap="updateWord" data-text="业务办理" data-content="thing">
+          <image src="/icons/thing.svg"  class="icon-middle" mode=""/>
+          <text>业务办理</text>
+        </view>
+        <view class="littleList" bindtap="updateWord" data-text="招聘求职" data-content="text">
+          <image src="/icons/job.svg"  class="icon" mode=""/>
+          <text>招聘求职</text>
+        </view>
+        <view class="littleList" bindtap="updateWord" data-text="二手交易" data-content="image">
+          <image src="/icons/trade.svg"  class="icon" mode=""/>
+          <text>二手交易</text>
+        </view>
+        <view class="littleList" bindtap="updateWord" data-text="校友管理" data-content="message">
+          <image src="/icons/activity.svg" class="icon-middle" mode=""/>
+          <text>校友活动</text>
+        </view>
+        <view class="littleList" bindtap="updateWord" data-text="公益捐赠"  style="border: none;" data-content="support">
+         <image src="/icons/donate.svg"  class="icon" mode=""/>
+          <text>公益捐赠</text>
+        </view>
+      </view>
+    </view>
+
+    <image src="../../icons/tag.svg" class="tag" />
+    <view class="tagText">{{selectedText}}</view>
+    <block wx:if="{{currentSelection === 'thing'}}">
+      <view class="window" bind:tap="server">
+        <image class="xiaomai" src="/images/xiaomai.png" mode=""/>
+        <view class="basic">主要业务</view>
+        <van-cell title="档案调动 休学申请" is-link value="详情" title-width="40%"/>
+      </view>
+    </block>
+    <block wx:if="{{currentSelection === 'text'}}">
+      <view class="window" bind:tap="hire">
+        <image class="xiaomai" src="/images/xiaomai.png" mode=""/>
+        <view class="main">
+          <view style="font-weight: bolder;">项目经理</view>
+          <view class="wages">12-14K</view>
+        </view>
+        <view class="detail">
+          <view class="request">本科</view>
+          <view class="request" style="width: 35px;">1-3年</view>
+          <view class="request" style="width: 50px;">上六休一</view>
+        </view>
+        <view class="detail">
+          <view class="benefit">五险/三险</view>
+          <view class="benefit">全勤奖金</view>
+        </view>
+        <view class="company">
+          <image src="../../icons/avatar.svg" style="width: 18px; height: 18px;"/>
+          <text style="font-size: 13px;">张三大数据</text>
+          <text style="font-size: 13px; margin-left: 55px;">50-999人</text>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{currentSelection === 'image'}}">
+      <view class="window" bind:tap="trade">
+        <image class="xiaomai" src="/images/xiaomai.png" mode=""/>
+        <image src="https://img0.baidu.com/it/u=934656582,4109810060&fm=253&fmt=auto&app=138&f=JPEG?w=706&h=395" style="width: 205px; height: 130px;" />
+      </view>
+    </block>
+    <block wx:if="{{currentSelection === 'message'}}">
+      <view class="window" bind:tap="activity">
+        <image class="xiaomai" src="/images/xiaomai.png" mode=""/>
+        <view class="basic">基本信息</view>
+        <van-cell title="张三" is-link value="详情" label="2018届毕业生" />
+      </view>
+    </block>
+    <block wx:if="{{currentSelection === 'support'}}">
+      <view class="window" bind:tap="donate">
+        <image class="xiaomai" src="/images/xiaomai.png" mode=""/>
+        <view class="money">教育公积金</view>
+        <view class="sum">
+          <view>已筹(元)</view>
+          <view style="color: rgb(212, 64, 64); margin-left: 40%">15w+</view>
+        </view>  
+        <view class="sum">
+          <view>捐款(次)</view>
+          <view style="color: rgb(212, 64, 64); margin-left: 40%;">561</view>
+        </view>
+        <view class="pay">助力</view>
+      </view>
+    </block>
+    <view>
+      <view style="margin-top: 40px;" class="title">校园资讯</view>
+      <view class="news-item" wx:for="{{newsList}}" wx:key="index">
+        <view class="news-title">{{item.title}}</view>
+        <view class="news-body">
+          <view class="news-content">{{item.content}}</view>
+          <view class="news-photo">
+            <image src="{{item.imgurl}}" alt="" mode="aspectFill" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <float-button></float-button>
+</view>

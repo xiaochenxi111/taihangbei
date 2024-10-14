@@ -1,0 +1,66 @@
+/* pages/archiveMove/archiveMove.wxss */
+.my-view {
+  background-color: #e0f2f1; /* 设置背景颜色 */
+  height: 100rpx; /* 设置高度，仅作示例 */
+  width: 100%; /* 设置宽度，仅作示例 */
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #e0f2f1;
+  width: 100%;
+  height: 89.1vh;
+}
+
+.nav-bar{
+  position: fixed;
+  left: 0;
+  top: 0.5%;
+}
+
+.form-item {
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px; /* 限制表单宽度 */
+}
+
+.label {
+  font-size: 18px;
+  color: #004d40;
+  margin-right: 10px; /* 添加右边距 */
+  flex-shrink: 0; /* 防止标签压缩 */
+  width: 80px; /* 固定标签宽度 */
+}
+
+.input, .textarea {
+  border: 1px solid #b2dfdb;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  width: 200px; /* 设置输入框的固定宽度 */
+}
+
+.textarea {
+  height: 100px; /* 设置文本区域的高度 */
+  width: calc(100% - 90px); /* 文本区域宽度减去标签宽度 */
+}
+
+.submit-button {
+  background-color: #009688;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  width: 100%;
+  margin-top: 20px; /* 添加顶部边距 */
+  cursor: pointer; /* 鼠标样式 */
+}
+
+.submit-button:active {
+  background-color: #00796b; /* 按下按钮时的颜色 */
+}

@@ -1,0 +1,177 @@
+/* Main page container */
+.page-container {
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom navigation bar */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px; /* Adjust as needed */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  margin: auto;
+  padding-top: 40px;
+}
+
+/* Chat container */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: height 0.3s ease, transform 0.3s ease;
+  z-index: 5;
+  overflow: hidden; /* Ensures content stays inside the container */
+}
+
+/* Reduce height when the operation panel is shown */
+.chat-container.shifted {
+  height: calc(100vh - 210px); /*高度降低，为操作面板和输入字段腾出空间*/
+  z-index: 5;
+}
+
+/* Message list (scrollable area) */
+.message-list {
+  flex: 1;
+  padding: 25px 0;
+  overflow-y: auto;
+  background-image: linear-gradient(to right, #e8f5e9, #e0f7fa);
+  z-index: 5;
+}
+
+/* Individual message styling */
+.message {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.message.self {
+  flex-direction: row-reverse;
+}
+
+/* Avatar styles */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+/* Message content box */
+.content {
+  background-image: linear-gradient(to right, rgba(224, 247, 250, 0.8), rgba(232, 245, 233, 0.8));
+  padding: 10px;
+  border-radius: 13px;
+  border: 1px solid #999;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.self .content {
+  background-image: linear-gradient(to right, rgba(232, 245, 233, 0.8), rgba(224, 247, 250, 0.8));
+}
+
+/* Input area */
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+/* When operation panel is open, move input area up */
+.input-area.panel-open {
+  transform: translateY(-150px);
+  transition: transform 0.3s ease;
+  z-index: 100; /* Ensure z-index is higher than operation panel */
+}
+
+/* Message input field */
+.message-input {
+  flex: 1; /* Fill remaining space */
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 0 15px;
+  font-size: 16px;
+  border: 1px solid #e0e0e0;
+  z-index: 101;
+}
+
+/* Add and send button styles */
+.add-button, .send-button {
+  width: 36px;
+  height: 36px;
+  margin-left: 10px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+}
+
+
+/* Operation panel */
+.operation-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background-color: white;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 99;
+}
+
+.operation-panel.show {
+  transform: translateY(0);
+}
+
+/* Hints for quick replies */
+.hints {
+  padding: 0 16px;
+  color: #333;
+  font-size: 14px;
+}
+
+.hints text {
+  display: block;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+/* 过渡效果 */
+.transition {
+  transition: opacity 0.4s ease, transform 0.4s ease; /* 添加透明度和位移的过渡 */
+  opacity: 1; /* 默认可见 */
+}
+
+/* 当隐藏时 */
+.transition[hidden] {
+  opacity: 0; /* 隐藏时透明度为0 */
+  transform: translateY(-10px); /* 可以选择轻微向上移动 */
+  pointer-events: none; /* 禁止事件 */
+  transition: opacity 0.4s ease, transform 0.4s ease; /* 添加透明度和位移的过渡 */
+}

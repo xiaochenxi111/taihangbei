@@ -1,0 +1,80 @@
+<!--pages/hire/hire.wxml-->
+<view class="page">
+<view class="container">
+  <image src="https://img1.baidu.com/it/u=1015159514,2651224330&fm=253&fmt=auto&app=120&f=JPEG?w=902&h=500" class="img" />
+  <van-icon name="arrow-left" class="tap" size="20px" bindtap="navigateToIndex" />  
+</view>  
+
+<view>
+  <view class="search-box">  
+    <input type="search" placeholder="请输入关键字搜索" bindconfirm="handleSearch"
+    confirm-type="search" />  
+    <button bind:tap="goods" class="goods">搜索</button>  
+  </view>
+
+  <view class="list">  
+    <block wx:for="{{listItems}}" wx:key="index">  
+      <view style="margin-left: 8.5%;">  
+        <image src="{{item.img}}" class="pic" />  
+        <view style="font-size:small;">{{item.text}}</view>  
+      </view>  
+    </block>  
+  </view>
+
+  <view class="notice">
+    <view class="text">
+      <text style="color: rgb(131, 187, 66);">招聘</text>公告
+    </view>
+    <text style="margin-top: 11px;">机会是留给有准备的人滴~</text>
+  </view>
+
+  <view style="margin-top: 20px;">
+    <text class="project">名企推荐</text>
+    <text class="more">更多</text>
+    <van-icon name="arrow" color="grey" />
+  </view>
+  <view class="card">  
+    <block wx:for="{{companies}}" wx:key="index">  
+      <view class="company">  
+        <image src="{{item.img}}" class="brand" />  
+        <view class="name">{{item.name}}</view>  
+        <view class="sort">{{item.sort}}</view>  
+      </view>  
+    </block>  
+  </view>
+
+  <view style="margin-top: 20px;">
+    <text class="project">热门工作</text>
+    <text class="more">更多</text>
+    <van-icon name="arrow" color="grey" />
+  </view>
+  <view style="height: 700px;">
+  <block wx:for="{{items}}" wx:key="job">  
+    <view class="window">  
+      <view class="title">  
+        <view class="job">{{item.job}}</view>  
+        <view class="money">{{item.money}}</view>  
+      </view>  
+      <view class="request">  
+        <block wx:for="{{item.requirements}}" wx:key="*this">  
+          <view class="little">{{item}}</view>  
+        </block>  
+      </view>  
+      <view class="request">  
+        <block wx:for="{{item.benefits}}" wx:key="*this">  
+          <view class="little">{{item}}</view>  
+        </block>  
+      </view>  
+      <view class="employer">  
+        <view class="request">  
+          <image src="{{item.employer.avatar}}" style="width: 30px; height: 30px;" />  
+          <view style="margin-left: 7px;">{{item.employer.name}}</view>  
+        </view>  
+        <view>{{item.employer.size}}</view>  
+      </view>  
+    </view>  
+  </block>  
+</view>
+
+</view>
+</view>

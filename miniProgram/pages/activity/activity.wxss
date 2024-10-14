@@ -1,0 +1,80 @@
+/* pages/activity/activity.wxss */
+.container {
+  width: 95%;
+  height: 867px;
+  padding-top: 65px;
+}
+.search-box {
+  display: flex;
+  flex-direction: row;
+  margin-top: 35px;
+}
+.search-box input {  
+  width: 70%;  
+  padding: 12px;  
+  border-radius: 20px;  
+  /* margin-left: 15px; */
+  background-color: rgb(238, 237, 237);
+}  
+.goods {
+  width: 16%;
+  border-radius: 15px;
+  background-color: rgb(196, 224, 164);
+}
+.title {
+  width: 430px;
+  height: 43px;
+  margin-top: 15px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+.continue {
+  width: 70px;
+  height: 42px;
+  /* margin-left: 20px; */
+  color: rgb(162, 197, 116);
+  font-weight: bolder;
+  border-bottom: 3px solid rgb(170, 202, 129);
+  padding-left: 12px;
+}
+.stop {
+  width: 80px;
+  height: 42px;
+  margin-left: 15%;
+}
+.background {
+  background-color: rgb(238, 237, 237);
+  width: 100%;
+  height: 680px;
+  padding-top: 1px;
+}
+.detail {
+  /* width: 400px; */
+  height: 160px;
+  background-color: white;
+  margin:0 2%;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+.img {
+  width: 180px;
+  height: 135px;
+  border-radius: 10px;
+  margin: 13px 17px;
+}
+.word {
+  width: 190px;
+  margin-top: 20px;
+}
+.race {
+  font-size: 17px;
+  font-weight: bolder;
+}
+.time {
+  margin-top: 12px;
+  color: grey;
+}

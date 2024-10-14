@@ -1,0 +1,73 @@
+/* pages/trade/trade.wxss */
+.container {
+  width: 100%;
+  height: 1250px;
+  padding-top: 65px;
+}
+.search-box {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+.search-box input {  
+  width: 70%;  
+  padding: 12px;  
+  border-radius: 20px;  
+  margin-left: 15px;
+  background-color: rgb(238, 237, 237);
+}  
+.goods {
+  width: 16%;
+  border-radius: 15px;
+  background-color: rgb(196, 224, 164);
+}
+.img {
+  width: 100%;
+  height: 200px;
+}
+.sort {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.pic {
+  width: 35px;
+  height: 35px;
+  align-items: center;
+  /* margin-left: 20%; */
+}
+.detail {
+  width: 45%;
+  margin-left: 3%;
+  margin-top: 15px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 5px;
+}
+.look {
+  width: 45vw;
+  height: 150px;
+  border-radius: 5px;
+}
+.price {
+  color: rgb(207, 53, 53);
+  font-size: 12px;
+}
+.num {
+  font-size: 16px;
+  font-weight: bolder;
+}
+.seller {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}

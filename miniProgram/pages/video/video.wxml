@@ -1,0 +1,56 @@
+<view class="container">
+  
+  <video
+    class="myView"
+    id="myVideo"
+    src="{{videoList[currentVideoIndex].url}}"
+    controls
+    autoplay
+    bindtouchstart="handleTouchStart"
+    bindtouchmove="handleTouchMove"
+    bindtouchend="handleTouchEnd"
+    style="transform: translateY({{translateY}}px);"
+    objectFit="cover"
+    show-fullscreen-btn="{{false}}"
+  >
+    <image
+      class="sync-reverse-icon"
+      src="/images/sync-reverse.svg"
+      bindtap="flipVideo"
+    />
+  </video>
+
+  <view class="video-title" style="transform: translateY({{translateY}}px);">
+    {{videoList[currentVideoIndex].title}}
+  </view>
+  <view class="video-actions">
+  
+    <image
+      class="like-icon"
+      src="{{videoList[currentVideoIndex].liked ? '/images/liked.svg' : '/images/like.svg'}}"
+      bindtap="toggleLike"
+    />
+    <image
+      class="collect-icon"
+      src="{{videoList[currentVideoIndex].collected ? '/images/collect.svg' : '/images/collected.svg'}}"
+      bindtap="toggleCollect"
+    />
+    <image
+      class="comment-icon"
+      src="/images/comment~.svg"
+      bindtap="toggleComment"
+    />
+    <view class="danmu-container-wrapper" hidden="{{!showDanmuContainer}}">
+      <view class="danmu-container">
+        <input
+          class="danmu-input"
+          type="text"
+          placeholder="输入弹幕"
+          value="{{danmu}}"
+          bindinput="bindInputDanmu"
+        />
+        <button class="send-danmu-btn" bindtap="sendDanmu">发送</button>
+      </view>
+    </view>
+  </view>
+</view>

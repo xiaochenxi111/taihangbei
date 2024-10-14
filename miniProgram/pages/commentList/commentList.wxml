@@ -1,0 +1,69 @@
+<!-- pages/commentList/commentList.wxml -->
+<view>
+  <view class="container row mtop-2"></view>
+  <view class="nav-bar">
+    <image src="/images/back.svg" 
+        mode="aspectFit" 
+        bindtap="reLaunchToHome" 
+        class="icon-small"/>
+  </view>
+  <view class="container">
+  <!-- 帖子部分 -->
+  <view class="post-header">
+    <image class="avatar" src="{{post.avatar}}"></image>
+    <text class="nickname">{{post.nickname}}</text>
+    <text class="time">{{post.time}}</text>
+  </view>
+  <view class="post-content">
+    <text>{{post.content}}</text>
+  </view>
+  
+  </view>
+
+  <!-- 评论部分 -->
+  <view class="comment-list-container">
+    <view class="comment" wx:for="{{comments}}" wx:key="index">
+      <text class="comment-content">{{item.content}}</text>
+      <text class="comment-time">{{item.time}}</text>
+    </view>
+  </view>
+  <view class="post-footer" wx:if="{{!showInput}}">
+    <view class="action">
+      <image class="icon" src="{{post.isLiked ? '/images/liked.svg' : '/images/like.svg'}}"></image>
+      <text>{{post.likeCount}}</text>
+    </view>
+    <view class="action" bindtap="showInput">
+      <image class="icon" src="/images/comment.svg"></image>
+      <text>{{post.commentCount}}</text>
+    </view>
+    <view class="action">
+      <image class="icon" src="/images/share.svg"></image>
+      <text>{{post.shareCount}}</text>
+    </view>
+  </view>
+  <view class="pop-section" wx:if="{{showInput}}">
+    <van-search shape="round"  focus="auto" value="{{inputMessage}}"
+    placeholder="请输入评论内容" bind:blur="onHideInput"  bind:focus="onFocus"
+    custom-class="comment-input"  background="rgba(73,199,86,0.1)"
+    use-action-slot  use-left-icon-slot
+    cursor-spacing="{{0}}" adjust-position="{{false}}"
+    style="bottom:{{keyboardHeight}}">
+      <van-button slot="action" type="primary" custom-class="add-btn" hairline>
+          发布
+      </van-button>
+    </van-search>
+    <view class="occupation">
+      <image src="/images/xiaomai.png" class="xiaomai"/>
+      <van-cell-group inset custom-class="notice">
+        <van-cell custom-class="notice-card">
+        小脉提醒您:请善意发言!
+        </van-cell>
+      </van-cell-group>
+    </view>
+  </view>
+
+</view>
+
+  
+
+

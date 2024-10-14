@@ -1,0 +1,155 @@
+.page-container{
+  height: 94vh;
+  display: flex;
+  flex-direction: column;
+}
+.background {
+  width: 100%;
+  height: 843px;
+  position: absolute;
+  z-index: -1;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 15px;
+  width: 70%;
+}
+
+.search-input {
+  flex-grow: 1;
+  height: 4.5vh;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.search-icon {
+  width: 9vw;
+  height: 5vh;
+  margin-left: 2.5%;
+}
+
+.container {
+  padding: 10px 0;
+}
+
+.post {
+  width: 95%; /* 设置固定宽度 */
+  padding: 10px 15px;
+  padding-right: 30px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.nickname {
+  font-size: 16px;
+  color: #689436; /* 主题青蓝色 */
+  font-weight: 600;
+}
+
+.time {
+  font-size: 12px;
+  color: #999999;
+  margin-left: auto;
+}
+
+.post-content {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333333; /* 文字颜色加深 */
+}
+
+.post-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e5e5e5; /* 分隔线 */
+}
+
+.action {
+  display: flex;
+  align-items: center; /* 确保图标和文字垂直居中对齐 */
+  margin-right: 27vw;
+}
+
+.action.first{
+  margin-left: 3vw;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 7px;
+}
+
+.action text {
+  color: rgb(80, 79, 79); /* 主题青蓝色 */
+  vertical-align: middle; /* 确保文字垂直居中 */
+}
+.action .icon {
+  vertical-align: middle; /* 确保图标垂直居中 */
+}
+
+.action text {
+  vertical-align: middle; /* 确保文本垂直居中 */
+  line-height: 20px; /* 如果需要，可以调整行高 */
+}
+/* 在页面的 <style> 标签中添加以下CSS样式 */
+.post-container {
+  display: flex;
+  justify-content: space-around; /* 水平平分宽度 */
+  align-items: center; /* 垂直居中对齐 */
+  position: fixed;
+  bottom: 2%; /* 固定在页面底部 */
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to right, rgba(224, 247, 250, 0.8), rgba(232, 245, 233, 0.8));
+  padding: 6px;
+  border-radius: 5px;
+  margin: 6px;
+  margin-top: auto; /* 将容器推到底部 */
+}
+
+.post-input {
+  flex: 5; /* 调整为占比更大 */
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.post-button {
+  flex: 1; /* 调整为占比更小 */
+  background-image: linear-gradient(to right, rgba(224, 247, 250, 1), rgba(232, 245, 233, 1));
+  color: black;
+  border: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 10px; /* 添加左边距，让布局更美观 */
+}
+
+.post-button:active {
+  background-color: #179b16;
+}

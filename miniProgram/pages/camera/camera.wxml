@@ -1,0 +1,9 @@
+<!--pages/camera/camera.wxml-->
+<view>
+  <camera mode="normal"
+    style="width: 750rpx; height: 1625rpx;"
+    device-position="{{pos}}"     
+    bind:tap="takePic">    
+    <image src="../../icons/return.svg" style="width: 28px; height: 28px; margin-top: 52px; margin-left: 20px;" bindtap="navigateToUserPage" />
+  </camera>
+</view>

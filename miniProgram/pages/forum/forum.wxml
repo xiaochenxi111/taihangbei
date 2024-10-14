@@ -1,0 +1,40 @@
+<view class="page-container">
+  <view class="container row mtop-1-5"></view>
+  <image src="../../icons/background2.jpg" class="background" />
+  <view class="search-container">
+    <input class="search-input" type="text" placeholder="搜索帖子" bindinput="onSearchInput" />
+    <image class="search-icon" src="/icons/search.svg" bindtap="onSearch"></image>
+  </view>
+  <view class="container">
+    <view class="post" wx:for="{{posts}}" wx:key="index">
+      <view class="post-header">
+        <image class="avatar" src="{{item.avatar}}"></image>
+        <text class="nickname">{{item.nickname}}</text>
+        <text class="time">{{item.time}}</text>
+      </view>
+      <view class="post-content">
+        <text>{{item.content}}</text>
+      </view>
+      <view class="post-footer">
+        <view class="action first" bindtap="onLike" data-index="{{index}}">
+          <image class="icon" src="{{item.isLiked ? '/images/liked.svg' : '/images/like.svg'}}"></image>
+          <text>{{item.likeCount}}</text>
+        </view>
+        <view class="action" bindtap="onComment" data-index="{{index}}">
+          <image class="icon-small2" style=" margin-right: 7px;" src="/images/comment.svg"></image>
+          <text>{{item.commentCount}}</text>
+        </view>
+        <view class="action" bindtap="onShare" data-index="{{index}}">
+          <image class="icon-small2" style=" margin-right: 7px;" src="/images/share.svg" data-index="{{index}}"></image>
+          <text>{{item.shareCount}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="post-container">
+    <input class="post-input" type="text" placeholder="发表你的想法..." bindinput="onPostInput" 
+    value="{{newPostContent}}"/>
+    <button class="post-button" bindtap="onPostSubmit">发帖</button>
+  </view>
+</view>
