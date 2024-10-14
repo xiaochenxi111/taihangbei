@@ -1,0 +1,26 @@
+<view class="container-ball">
+  <view class="floating-ball" bindlongtap="onLongTap" bindtouchend="onTouchEnd" bindtouchmove="onTouchMove">
+    <image class="ball-icon" src="/icons/ball.svg" />
+  </view>
+  <view class="option-menu {{showOptions ? 'show' : ''}}">
+    <view class="option-item" data-option="1">
+      <image class="option-icon" src="/icons/friends.svg" />
+      <view class="option-tooltip {{currentOption === 1 ? 'show' : ''}}">进校码</view>
+    </view>
+    <!-- <view class="option-item" data-option="2">
+      <image class="option-icon" src="/icons/friends.svg" />
+      <view class="option-tooltip {{currentOption === 2 ? 'show' : ''}}">头像</view>
+    </view>
+    <view class="option-item" data-option="3">
+      <image class="option-icon" src="/icons/friends.svg" />
+      <view class="option-tooltip {{currentOption === 3 ? 'show' : ''}}">点击</view>
+    </view>
+    <view class="option-item" data-option="4">
+      <image class="option-icon" src="/icons/friends.svg" />
+      <view class="option-tooltip {{currentOption === 4 ? 'show' : ''}}">代码</view>
+    </view> -->
+  </view>
+  <view class="preview-overlay" wx:if="{{showPreviewImage}}" catchtap="onPreviewTap">
+    <image class="preview-image" src="{{previewImageSrc}}" />
+  </view>
+</view>
